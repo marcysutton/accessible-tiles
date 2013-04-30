@@ -1,0 +1,141 @@
+body {
+	background-color:#000;
+	color:#fff;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.clear {
+	clear:both;
+	display:block;
+}
+h3 {
+	margin:0;
+}
+
+#version1 {
+	figure.tile {
+		display:block;
+		float:left;
+		height:150px;
+		margin-bottom:10px;
+		margin-right:10px;
+		width:150px;
+	
+		a {
+			border:1px solid #fff;
+			color:#fff;
+			display:block;
+			font-weight:bold;
+			height:100%;
+			overflow:hidden;
+			position:relative;
+			width:100%;
+				
+			&:hover,
+			:focus {
+				background-color:#fff;
+				color:#333;
+			}
+			&.flipped {
+				background-color:#c6ff00;
+				color:#333;
+			}
+			div {
+				border:1px solid #000;
+				display:block;
+				height:130px;
+				left:0;
+				margin:10px;
+				position:absolute;
+				top:0;    
+				-o-transition: top .5s ease-out;
+				-ms-transition: top .5s ease-out;
+				-moz-transition: top .5s ease-out;
+				-webkit-transition: top .5s ease-out;
+				transition: top .5s ease-out;
+				width:130px;
+			}
+			&.flipped div.tile-back,
+			div.tile-front {
+				top:0;
+			}
+			div.tile-back {
+				top:150px;
+				z-index:1;
+			}			
+			&.flipped div.tile-front {
+				top:-150px;
+			}
+		}
+	}
+}
+
+#version2 {
+	margin:0;
+	padding:0;
+	
+	.hidden {
+		display:none;
+		visibility:hidden;
+	}
+	figure.tile {
+		border:1px solid #fff;
+		color:#fff;
+		display:block;
+		float:left;
+		height:150px;
+		margin-bottom:10px;
+		margin-right:10px;
+		overflow:hidden;
+		position:relative;
+		width:150px;
+	
+		&:hover,
+		&:focus {
+			background-color:#fff;
+			cursor:pointer;
+			color:#333;
+		}
+		&.flipped {
+			background-color:#c6ff00;
+			color:#333;
+		}
+		div {
+			border:1px solid #000;
+			display:block;
+			font-weight:bold;
+			height:130px;
+			left:0;
+			margin:10px;
+			position:absolute;
+			top:0;    
+			-o-transition: top .5s ease-out;
+			-ms-transition: top .5s ease-out;
+			-moz-transition: top .5s ease-out;
+			-webkit-transition: top .5s ease-out;
+			transition: top .5s ease-out;
+			width:130px;
+			
+			a {
+				color:#cf6600;
+				display:block;
+				font-size:11px;
+				margin-top:10px;
+				
+				span {
+					display:block;
+				}
+			}
+		}	
+		&.flipped div.tile-back,
+		div.tile-front {
+			top:0;
+		}
+		div.tile-back {
+			top:150px;
+			z-index:1;
+		}			
+		&.flipped div.tile-front {
+			top:-150px;
+		}
+	}
+}

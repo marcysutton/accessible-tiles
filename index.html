@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accessible Tiles</title>
+	<link rel="stylesheet" type="text/css" href="_ui/css/main.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="_ui/js/main.js"></script>
+</head>
+<body>
+<h1>Accessible Tiles</h1>
+  <p>Interactive tiles are a common design pattern found on the web. With care, we can make them fancy & fun while still working with screen readers. Here are two approaches I've tested with Safari & VoiceOver.</p>
+<div class="wrapper" id="version1">
+<h2>Version 1</h2>
+<p>Tiles are interactive but the front & back of each tile always reads aloud to screen readers regardless of visual state.</p>
+	<figure class="tile">
+		<a href="#">
+			<div class="tile-front"><h3>Tile 1 front</h3></div>
+			<div class="tile-back"><h3>continues onto back</h3></div>
+		</a>
+	</figure>
+	<figure class="tile">
+		<a href="#">
+			<div class="tile-front"><h3>Tile 2 front</h3></div>
+			<div class="tile-back"><h3>continues onto back</h3></div>
+		</a>
+	</figure>
+	<figure class="tile">
+		<a href="#">
+			<div class="tile-front"><h3>Tile 3 front</h3></div>
+			<div class="tile-back"><h3>continues onto back</h3></div>
+		</a>
+	</figure>
+	<div class="clear"></div>
+</div>
+<div class="wrapper" id="version2">
+<h2>Version 2</h2>
+<p>The wrapping element toggles the front & back via click & enter key. Tiles also have internal links for screen readers to toggle visibility.</p>
+	<figure class="tile" tabIndex="0">
+		<div class="tile-front">
+			<h3 tabIndex="-1">Tile 1 front</h3>
+			<a href="#" tabIndex="-1">Go to Tile 1 back <span>(screen reader link)</span></a>
+		</div>
+		<div class="tile-back">
+			<h3 tabIndex="-1">Tile 1 back</h3>
+			<a href="#" tabIndex="-1">Go to Tile 1 front <span>(screen reader link)</span></a>
+		</div>
+	</figure>
+	<figure class="tile" tabIndex="0">
+		<div class="tile-front">
+			<h3 tabIndex="-1">Tile 2 front</h3>
+			<a href="#" tabIndex="-1">Go to Tile 2 back <span>(screen reader link)</span></a>
+		</div>
+		<div class="tile-back">
+			<h3 tabIndex="-1">Tile 2 back</h3>
+			<a href="#" tabIndex="-1">Go to Tile 2 front <span>(screen reader link)</span></a>
+		</div>
+	</figure>
+	<figure class="tile" tabIndex="0">
+		<div class="tile-front">
+			<h3 tabIndex="-1">Tile 3 front</h3>
+			<a href="#" tabIndex="-1">Go to Tile 3 back <span>(screen reader link)</span></a>
+		</div>
+		<div class="tile-back">
+			<h3 tabIndex="-1">Tile 3 back</h3>
+			<a href="#" tabIndex="-1">Go to Tile 3 front <span>(screen reader link)</span></a>
+		</div>
+	</figure>
+	<div class="clear"></div>
+</div>
+</body>
+</html>
