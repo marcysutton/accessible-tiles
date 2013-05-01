@@ -8,12 +8,12 @@ Here are two approaches I've tested with Safari & VoiceOver.
 
 Files included:
 
-index.html
-_ui/js/main.js
-_ui/css/_main.scss
+index.html<br />
+_ui/js/main.js<br />
+_ui/css/_main.scss<br />
 _ui/css/compiled.scss
 
 To compile SCSS:
 
-$ gem install sass 
+$ gem install sass <br />
 $ sass --watch _ui/css/_main.scss:_ui/css/compiled.css
